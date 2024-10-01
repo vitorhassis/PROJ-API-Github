@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex; /*para colocar os itens de dentro lado a lado*/
+    flex-direction: column; /*todos os itens que eu tiver dentro do body, irao ficar um abaixo do outro*/
+    align-items: center; /*ficar tudo bem centralizado*/
+}
+
+hr {
+    width: 50vw;
+    margin: 10px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}

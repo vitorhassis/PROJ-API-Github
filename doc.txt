@@ -1,0 +1,52 @@
+Nesse projeto, vamos consumir uma API do github.
+
+DICAS
+-let const e var. 3 tipos de variaveis. let e const possuem escopo de bloco, ou seja, criadas e usadas apenas dentro do escopo de bloco onde foram
+concebidas. let pode ser atualizada, mutável, possuir outro valor, enquanto const não. Var pode ser global ou local, e também pode ter valor atualizado,
+ou seja, mutável;
+-ul.innerHTML = '' = garantimos que a ul vai estar vazia para ser preenchida, apartir do momento do click, evitando que ao clicar duas vezes ou mais, ele 
+fique repitindo a pesquisa e concatenando tudo na coluna. Ou seja, ele zera todo o html;
+
+HTML
+-No html n fizemos nada de mais, no video ele faz o css junto, eu fiz separado, ent linkei o css. Coloquei o favicon do github pra ficar mais parecido;
+-Criamos um h1, um titulo chamado de "Github API", logo abaixo, criamos uma div que vai ter um label para "nome do usuario", um input do tipo text,
+ou seja, um espaco para o usuario digitar, e na frente um botao escrito buscar, onde ao clicar, (onclick) chamará a função em Js getApi();
+-o <hr> é pra dar esse espaçamento/linha pra dar uma separada;
+-Falou em formulário, ou espaço de pesquisa, é label e input. Quando associamos o id do input no label, se voce clicar no label, é como se voce tb
+selecionasse/clicasse na barra de espaço, voce conectou eles;
+-Colocamos direto no button, o evento de onclick e vai chamar a funcao getAPI, mas poderia ter feito tbm, atraves do DOM, pegando esse botao, ex:
+const loadbutton = document.query.... ai adicionaria um evento de click nessa const/botao, tipo: loadbutton.addEventListener("click", async (e) => {
+...
+};
+
+CSS
+-criamos uma classe, uma estilização de uma classe chamada m-10, que é basicamente uma margem de 10px;
+JS
+-Ele fez td em um arquivo só, mas eu criei um arquivo separado pro js;
+-criamos uma funcao, chamada de getApi, que sera literalmente chamada, ou seja, requisitada e executada apartir do momento em que eu clicar no botao;
+-primeiramente, pegamos atraves do DOM, a lista (ul) que é onde aparecerão os repositórios, e o user, que no caso, seria o espaço que vai possuir
+um valor que queremos, esse valor seria o proprio nome do perfil da busca. Por esse motivo, o .value no final;
+-É sempre bom, vc ir testando. Nessa parte, voce pode dar um console.log(user). Digite algo no input user e verá que, no console do navegador, estará
+escrito o que voce escreveu, ou seja, o valor da variavel que chamamos de user, ou seja dnv, o que vc digitou no campo destinado para a pesquisa;
+- o ul.innerHTML = '' é só pra garantir que, como a ul vai ser preenchida com os repositorios do perfil existente, quando a função for chamada, ela
+realmente esteja vazia;
+
+GetApi()
+-aq tem uma graça q eu n lembrava, que seria o catch. o catch é oq vai acontecer se der errado. o then, se der certo, ou seja, se o nome informado
+retornar os dados;
+-Bom, eu ja fiz um material explicando sobre api, fetch, await e json. Mas novamente so pra revisar, o fetch vai buscar os dados da api pela base url
+informada basicamente. Usa-se uma função assíncrona, pq usamos o AWAIT dentro dela;
+-usamos uma variavel do tipo let (escopo e mutável) que seria uma li (lista) que será criada dentro da ul a partir do momento em que retornar um valor 
+da api (tudo isso dentro do .then);
+-Tambem criamos outra varial let hr, que vai criar aquela linha fininha;
+-Juntamente com a criação da li (repositorios), a linha fininha pra separar os repositorios (let hr), adicionamos uma classe a variavel li usando o 
+lit.classlist.add('m-10'), que basicamente adiciona a classe do espaço que criamos, de 10px, no css;
+-Criamos uma let data, que seria todas as informações que vamos receber (tipo um array). Vamos esperar a resposta, ou seja, o resultado da promise (res) 
+e converter em json para podermos utilizá-las = let data = await res.json();
+-Como a api retorna uma array (estrutura de dados), vamos usar uma propriedade map, que nao tinha visto ainda;
+-propriedade map = como é um array, a propriedade map faz com que cada item do meu array, seja chamado de item. E como em cada item dessa array eu vou
+ter q criar uma li, hr, deixa eles dentro do data.map;
+-ul.appendChild(li) = pegar li e o hr, e vamos adicionar na ul. Como é feito esse incremento? com o appendChild, adicionar um elemento filho dentro do elemento pai.
+Como queremos adicionar um li e um hr ( linha fininha ), vc faz dois;
+-Agora faz sentido. A propriedade map permite a gnt transformar todo dado, para nome item, para que possamos escolher exatamente o dado que queremos, no caso, o
+repositório, que na array chamasse name;
