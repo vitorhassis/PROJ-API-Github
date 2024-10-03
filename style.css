@@ -4,21 +4,76 @@
 }
 
 body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex; /*para colocar os itens de dentro lado a lado*/
     flex-direction: column; /*todos os itens que eu tiver dentro do body, irao ficar um abaixo do outro*/
     align-items: center; /*ficar tudo bem centralizado*/
 }
 
+.rep_name {
+    margin-bottom: 1.1em;
+}
+
+.rep_name > a {
+    color: rgb(75, 143, 231);
+    text-decoration: none;
+}
+
+.name-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    margin: 0px 8px 0px ;
+    background-color: rgb(230, 229, 229);
+    border: none;
+    border-radius: 5px;    
+}
+
 hr {
-    width: 50vw;
-    margin: 10px;
+    border: 0;
+    height: 1px;
+    background-color: gray;
+    width: 60vw;
+}
+
+.hr_top {
+    margin-top: 3em;
 }
 
 .m-10 {
-    margin: 10px;
+    color: white ;
+    margin: 12px;
 }
 
 li {
-    display: flex;
+    display: flex; 
     flex-direction: column;
 }
+
+.data-create {
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 1em;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 9px 10px;
+}
+
+.circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 7px;
+    border: 0.5px solid rgba(0, 0, 0, 0.158);
+    border-radius: 50%;
+}
+
+.language {
+    color: rgb(180, 177, 177);
+    float: right;
+}
+

@@ -50,3 +50,5 @@ ter q criar uma li, hr, deixa eles dentro do data.map;
 Como queremos adicionar um li e um hr ( linha fininha ), vc faz dois;
 -Agora faz sentido. A propriedade map permite a gnt transformar todo dado, para nome item, para que possamos escolher exatamente o dado que queremos, no caso, o
 repositório, que na array chamasse name;
+-Eu fui incrementando novas coisas no projeto, mas tomei um gapzin qnd quis fazer um espaco em cima dos repositorios com informações sobre o usuário da pesquisa, como 
+nome, localidade, etc. Daí, descobri que eu teria que fazer duas requisições, ou seja, duas buscas na API. Uma para os dados do usuário, e outra para os repositórios.
