@@ -12,7 +12,7 @@ body {
 }
 
 .rep_name {
-    margin-bottom: 1.1em;
+    margin-bottom: 2em;
 }
 
 .rep_name > a {
@@ -20,17 +20,27 @@ body {
     text-decoration: none;
 }
 
+.rep_name > a:hover {
+    text-decoration: underline;
+}
+
 .name-date {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 input {
+    padding: 1px;
     margin: 0px 8px 0px ;
     background-color: rgb(230, 229, 229);
     border: none;
     border-radius: 5px;    
+}
+
+.hr_rep {
+    display: none;
 }
 
 hr {
@@ -40,14 +50,27 @@ hr {
     width: 60vw;
 }
 
-.hr_top {
-    margin-top: 3em;
+.name {
+    padding: 0.5em;
+    color: white;
 }
 
-.m-10 {
-    color: white ;
-    margin: 12px;
+.borda_pesquisa {
+    display: flex;
 }
+
+
+.pesquisa {
+    border-radius: 5px;
+    border: 0.5px solid gray;
+    padding: 4em;
+    padding-bottom: 6em;
+    margin-top: 33vh;
+    text-align: center;
+    color: white ;
+    
+}
+
 
 li {
     display: flex; 
@@ -72,8 +95,80 @@ li {
     border-radius: 50%;
 }
 
+.url_language {
+    margin-bottom: 5px;
+}
+
 .language {
     color: rgb(180, 177, 177);
     float: right;
 }
+
+
+.exibir {
+    border: none;
+    margin-top: 0;
+}
+
+.exibir_hr {
+    display: block;
+}
+
+.msg_erro {
+    margin: -1.5em;
+    color: rgb(230, 225, 225);
+}
+
+@media (max-width: 768px) {
+    hr {
+        width: 90vw;
+    }
+
+    .data-create {
+        font-size: 12px;
+    }
+
+    a {
+        margin-left: 1e;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 14px;
+    }
+
+    .url_language {
+        font-size: 11px;
+        width: 90vw;
+    }
+
+    .name-date {
+        width: 90vw;
+    }
+
+    .pesquisa {
+        width: 53vw;
+    }
+
+    input {
+        margin: 1em;
+    }
+
+    
+}
+
+@media (max-width: 378px) {
+    .url_language {
+        font-size: 10px
+    }
+
+    input {
+        margin: 1em;
+    }
+}
+
+
 
