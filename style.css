@@ -119,7 +119,7 @@ li {
     color: rgb(230, 225, 225);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 994px) {
     hr {
         width: 90vw;
     }
@@ -128,15 +128,31 @@ li {
         font-size: 12px;
     }
 
-    a {
-        margin-left: 1e;
+}
+
+@media (max-width: 650px) {
+
+    hr {
+        margin: auto;
+        width: 84vw;
     }
 
+    .url_language {
+        font-size: 13px;
+        width: 82vw;
+    }
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+
+    hr {
+        margin: auto;
+        width: 90vw;
+    }
+
     a {
+        margin-left: -0.1px;
         font-size: 14px;
     }
 
@@ -155,20 +171,24 @@ li {
 
     input {
         margin: 1em;
-    }
-
-    
+    }    
 }
 
-@media (max-width: 378px) {
+
+@media (max-width: 382px) {
     .url_language {
-        font-size: 10px
+        font-size: 10px;
     }
 
     input {
         margin: 1em;
     }
+
+    hr {
+        width: 90vw;
+    }
+
+    a {
+        margin-left: -0.5px;
+    }
 }
-
-
-
