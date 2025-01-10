@@ -2,7 +2,7 @@
 
 
 
-<p align="center">-Realizei mais um projeto consumindo uma API com JavaScript;</p>
+<p align="center">-Mais um projeto consumindo uma API com JavaScript;</p>
 
 
 
